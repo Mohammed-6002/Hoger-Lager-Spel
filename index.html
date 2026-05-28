@@ -2,10 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="theme-color" content="#1a6b3c">
+    <meta name="description" content="A fun dice game where you predict if the next roll will be higher or lower">
+    <title>Hoger Lager</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
-    <script src="JS/main.js"></script>
+    <div class="container">
+        <header class="text-center">
+            <h1>Hoger Lager</h1>
+        </header>
+        <main>
+            <div class="timer-display text-center"></div>
+            <div class="dice-container">
+                <div class="section section-computer">
+                    <h3 class="text-center">Computer</h3>
+                    <div class="dices">
+                        <div class="dice text-center computer-dice-one">&#9856;</div>
+                        <div class="dice text-center computer-dice-two">&#9857;</div>
+                    </div>
+                    <h4 class="text-center">Credits: <span class="computer-credits">0</span></h4>
+                </div>
+                <div class="section section-player">
+                    <h3 class="text-center">Speler</h3>
+                    <div class="dices">
+                        <div class="dice text-center player-dice-one">&#9858;</div>
+                        <div class="dice text-center player-dice-two">&#9859;</div>
+                    </div>
+                    <h4 class="text-center">Credits: <span class="player-credits">0</span></h4>
+                </div>
+            </div>
+            <div class="message text-center">
+                <div class="message-box">
+                    <p>Druk op Go om het spel te starten.</p>
+                </div>
+            </div>
+            <div id="result-display" class="text-center"></div>
+            <div class="controls">
+                <div class="text-center">
+                    <button id="dice-button" disabled>Gooi dobbelsteen</button>
+                </div>
+                <div class="text-center">
+                    <button id="higher-button" disabled>Hoger</button>
+                </div>
+                <div class="text-center">
+                    <button id="lower-button" disabled>Lager</button>
+                </div>
+                <div class="text-center">
+                    <button id="go-button">GO</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(reg => console.log('Service Worker registered'))
+                .catch(err => console.log('Service Worker registration failed:', err));
+        }
+    </script>
 </body>
 </html>
+
+
+
+
+

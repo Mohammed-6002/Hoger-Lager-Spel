@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" fill="#1a6b3c" rx="40"/>
+  <g transform="translate(48, 48)">
+    <!-- Left die -->
+    <rect x="0" y="0" width="45" height="45" fill="white" rx="4"/>
+    <circle cx="11.25" cy="11.25" r="2.25" fill="#1a6b3c"/>
+    <circle cx="22.5" cy="22.5" r="2.25" fill="#1a6b3c"/>
+    <circle cx="33.75" cy="33.75" r="2.25" fill="#1a6b3c"/>
+    
+    <!-- Right die -->
+    <rect x="51" y="0" width="45" height="45" fill="white" rx="4"/>
+    <circle cx="62.25" cy="11.25" r="2.25" fill="#1a6b3c"/>
+    <circle cx="73.5" cy="22.5" r="2.25" fill="#1a6b3c"/>
+    <circle cx="84.75" cy="33.75" r="2.25" fill="#1a6b3c"/>
+    
+    <!-- Arrows -->
+    <text x="48" y="75" font-size="32" font-weight="bold" fill="white" text-anchor="middle">⬆</text>
+    <text x="48" y="92" font-size="32" font-weight="bold" fill="white" text-anchor="middle">⬇</text>
+  </g>
+</svg>
